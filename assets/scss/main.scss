@@ -1,0 +1,180 @@
+//VARIABLES
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$hover-blue: hsl(245, 83%, 68%);
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+//FONTS
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;800;900&display=swap');
+
+
+
+//LAYOUT
+
+body {
+  min-height: 100vh;
+  background-image: url(../img/pattern-background-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: $pale-blue;
+  color: $desaturated-blue;
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+  .card {
+    background-color: white;
+    max-width: 20.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    @extend .shadow;
+
+    .banner {
+      width: 100%;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+
+      >*:not(:last-child) {
+        margin-bottom: 1.35rem;
+      }
+
+      >*:not(section) {
+        text-align: center;
+      }
+
+      h1 {
+        color: $dark-blue;
+        font-weight: 900;
+        font-size: 1.5rem;
+      }
+
+      p {
+        padding: 0 .5rem;
+      }
+
+      .plan {
+        background-color: $very-pale-blue;
+        font-size: .9rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .details {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          img {
+            margin-right: 1.2rem;
+          }
+
+          p {
+            padding: 0;
+            margin: 0;
+          }
+
+          p:first-child {
+            color: $dark-blue;
+            font-weight: 900;
+          }
+        }
+
+        a {
+          color: $bright-blue;
+          font-weight: 700;
+          transition: color .3s ease;
+
+          &:hover,
+          &:focus,
+          &:active {
+            color: $hover-blue;
+          }
+        }
+      }
+
+      >a {
+        display: block;
+        color: $desaturated-blue;
+        font-size: .95rem;
+        font-weight: 900;
+        text-decoration: none;
+        transition: color .3s ease;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $dark-blue;
+        }
+      }
+
+      .btn {
+        background-color: $bright-blue;
+        color: white;
+        font-weight: 700;
+        padding: 0.85rem;
+        border-radius: .55rem;
+        transition: background-color .3s ease;
+        @extend .shadow;
+
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: white;
+          background-color: $hover-blue;
+        }
+      }
+
+    }
+  }
+
+  footer {
+    margin-top: 1rem;
+
+    a {
+      color: $dark-blue;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color .3s ease;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $bright-blue;
+      }
+    }
+  }
+}
+
+//UTTILITIES
+.shadow {
+  -webkit-box-shadow: 0 1.75rem 1.75rem -0.6rem rgba(59, 68, 169, 0.3);
+  box-shadow: 0 1.75rem 1.75rem -0.6rem rgba(59, 68, 169, 0.3);
+}
+
+
+
+//MEDIA QUERIES
+@media screen and (min-width: 780px) {
+  body {
+    background-image: url(../img/pattern-background-desktop.svg);
+
+    .card {
+      max-width: 26.5rem;
+
+      .card-body {
+        padding: 2.5rem 3rem;
+      }
+    }
+  }
+}
