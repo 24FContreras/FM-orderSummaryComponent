@@ -83,8 +83,9 @@ body {
             margin: 0;
           }
 
-          p:first-child {
+          h2 {
             color: $dark-blue;
+            font-size: .9rem;
             font-weight: 900;
           }
         }

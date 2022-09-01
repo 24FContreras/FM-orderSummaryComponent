@@ -72,8 +72,9 @@ body .card .card-body .plan .details p {
   margin: 0;
 }
 
-body .card .card-body .plan .details p:first-child {
+body .card .card-body .plan .details h2 {
   color: #1f2f56;
+  font-size: .9rem;
   font-weight: 900;
 }
 
