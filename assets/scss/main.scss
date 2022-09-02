@@ -16,7 +16,7 @@ $dark-blue: hsl(223, 47%, 23%);
 body {
   min-height: 100vh;
   background-image: url(../img/pattern-background-mobile.svg);
-  background-size: contain;
+  background-size: 100% 50vmin;
   background-repeat: no-repeat;
   background-position: top;
   background-color: $pale-blue;

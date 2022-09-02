@@ -2,7 +2,7 @@
 body {
   min-height: 100vh;
   background-image: url(../img/pattern-background-mobile.svg);
-  background-size: contain;
+  background-size: 100% 50vmin;
   background-repeat: no-repeat;
   background-position: top;
   background-color: #e0e8ff;
